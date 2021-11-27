@@ -26,12 +26,22 @@ let tags = {
   'host': 'Host',
   'advanced': 'Advanced',
   'info': 'Info',
+  'videomaker': 'Video Maker',
+  'exp': 'Register',
+  'maker': 'Maker',
+  'download': 'Github Downloader',
+  'berita': 'Berita',
+  'audio': 'Audio',
   '': 'No Category',
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ Hai, %name!
+Hai perkenalkan saya adalah bot whatsapp
+Yang siap membantu kakak untuk membuat stiker
+Dan lainnya
+
+Selamat memakai bot %name!, pakai bot seperlunya aja ya :)
+╭─❒ 「 *%me* 」 ❒
 │
 │ Tersisa *%limit Limit*
 │ Role *%role*
@@ -44,11 +54,9 @@ const defaultMenu = {
 │
 │ Uptime: *%uptime (%muptime)*
 │ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
 ╰────
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
+  header: '╭─❒ 「 %category 」 ❒',
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
   after: `
