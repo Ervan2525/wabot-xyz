@@ -32,6 +32,7 @@ let tags = {
   'download': 'Github Downloader',
   'berita': 'Berita',
   'audio': 'Audio',
+  'apk': 'Mod Apk',
   '': 'No Category',
 }
 const defaultMenu = {
