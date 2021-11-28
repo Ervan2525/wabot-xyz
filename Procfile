@@ -1,1 +1,1 @@
-rker : npm i @adiwajshing/baileys@latest && node . --server 
+worker : npm i @adiwajshing/baileys@latest && node . --server 
