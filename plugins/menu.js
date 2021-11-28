@@ -8,7 +8,7 @@ let tags = {
     'sticker': 'Stiker',
     'kerang': 'Kerang Ajaib',
     'quotes': 'Quotes',
-    'admin': `Admin ${global.opts['restrict'] ? '' : '(Dinonaktifkan)'}`,
+    'admin': `Admin ${global.opts['restrict'] ? '' : '[ DINONAKTIFKAN ]'}`,
     'group': 'Grup',
     'premium': 'Premium',
     'internet': 'Internet',
@@ -20,7 +20,7 @@ let tags = {
     'database': 'Database',
     'vote': 'Voting',
     'absen': 'Absen',
-    'quran': 'Al Qur\'an',
+    'quran': 'Alquran',
     'audio': 'Pengubah Suara',
     'jadibot': 'Jadi Bot',
     'info': 'Info',
@@ -31,6 +31,9 @@ let tags = {
     'berita': 'Berita',
     'audio': 'Audio',
     'apk': 'Mod Apk',
+    'owner': 'Owner',
+    'host': 'Host',
+    'advanced': 'Advanced',
     '': 'Tanpa Kategori',
 }
 const defaultMenu = {
