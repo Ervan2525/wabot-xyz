@@ -9,7 +9,7 @@ async function handler(m, { command }) {
                 await this.sendButton(m.chat, '_Kamu tidak sedang berada di anonymous chat_', author, 'Cari Partner', `.start`, m)
                 throw false
             }
-            m.reply('Ok')
+            m.reply('*PERINTAH DITERIMA*')
             let other = room.other(m.sender)
             if (other) await this.sendButton(other, '_Partner meninggalkan chat_', author, 'Cari Partner', `.start`, m)
             delete this.anonymous[room.id]
@@ -47,7 +47,7 @@ async function handler(m, { command }) {
     }
 }
 handler.help = ['start', 'leave', 'next']
-handler.tags = 'anonymous'
+handler.tags = ['anonymous']
 
 handler.command = ['start', 'leave', 'next']
 handler.private = true
