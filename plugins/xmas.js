@@ -6,8 +6,8 @@ let link = 'https://bsbt-api-rest.herokuapp.com/api/textpro/xmas?text=' + text +
 conn.sendFile(m.chat, link, 'xmas.png', 'Sukses!', m)
 }
 handler.help = ['xmas <text>']
-handler.tags = ['creator']
-handler.command = /^(3d)$/i
+handler.tags = ['maker']
+handler.command = /^(xmas)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
