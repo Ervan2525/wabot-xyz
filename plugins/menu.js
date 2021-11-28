@@ -36,6 +36,7 @@ let tags = {
     'random': 'Random',
     'advanced': 'Advanced',
     'gacha': 'Gacha',
+    'fun': 'Fun',
     '': 'Tanpa Kategori',
 }
 const defaultMenu = {
