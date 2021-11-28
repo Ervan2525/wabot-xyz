@@ -33,6 +33,7 @@ let tags = {
     'apk': 'Mod Apk',
     'owner': 'Owner',
     'host': 'Host',
+    'random': 'Random',
     'advanced': 'Advanced',
     '': 'Tanpa Kategori',
 }
