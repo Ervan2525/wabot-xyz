@@ -35,6 +35,7 @@ let tags = {
     'host': 'Host',
     'random': 'Random',
     'advanced': 'Advanced',
+    'gacha': 'Gacha',
     '': 'Tanpa Kategori',
 }
 const defaultMenu = {
