@@ -9,12 +9,12 @@ module.exports = {
         if (m.quoted.id == this.asahotak[id][0].id) {
             let json = JSON.parse(JSON.stringify(this.asahotak[id][1]))
             if (['.ao', 'Bantuan', ''].includes(m.text)) return !0
-            if (m.text.toLowerCase() == json.result.jawaban.toLowerCase().trim()) {
+            if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
                 global.db.data.users[m.sender].exp += this.asahotak[id][2]
-                await this.sendButton(m.chat, `*Benar!* +${this.asahotak[id][2]} XP`, author, 'Asah Otak', '.asahotak', m)
+                await m.reply(`*Benar!* +${this.asahotak[id][2]} XP`)
                 clearTimeout(this.asahotak[id][3])
                 delete this.asahotak[id]
-            } else if (similarity(m.text.toLowerCase(), json.result.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
+            } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
             else m.reply(`*Salah!*`)
         }
         return !0
