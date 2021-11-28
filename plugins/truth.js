@@ -1,14 +1,15 @@
-let fetch = require('node-fetch')
-let handler = async (m, { text }) => {
-  let res = await fetch(global.API('pencarikode', '/api/truthid', {}, 'apikey'))
-  if (!res.ok) throw await res.text()
+let fetch = require('node-fetch') 
+let handler  = async (m) => {
+  let res = await fetch('https://raw.githubusercontent.com/BochilGaming/Rest-Api/main/src/data/truth.json')
   let json = await res.json()
-  if (!json.message) throw 'Error!'
-  if (json.message) m.reply(json.message)
-  else throw json
+  m.reply(pickRandom(json))
 }
 handler.help = ['truth']
-handler.tags = ['fun']
-handler.command = /^(truth|kebenaran|kejujuran)$/i
-//ftwr
+handler.tags = ['quotes']
+handler.command = /^(truth)$/i
+
 module.exports = handler
+
+function pickRandom(list) {
+  return list[Math.round(Math.random() * list.length)]
+}

@@ -1,14 +1,15 @@
-let fetch = require('node-fetch')
-let handler = async (m, { text }) => {
-  let res = await fetch(global.API('pencarikode', '/api/dareid', {}, 'apikey'))
-  if (!res.ok) throw await res.text()
+let fetch = require('node-fetch') 
+let handler  = async (m) => {
+  let res = await fetch('https://raw.githubusercontent.com/BochilGaming/Rest-Api/main/src/data/dare.json')
   let json = await res.json()
-  if (!json.message) throw 'Error!'
-  if (json.message) m.reply(json.message)
-  else throw json
+  m.reply(pickRandom(json))
 }
 handler.help = ['dare']
-handler.tags = ['fun']
-handler.command = /^(dare|berani|tantangan)$/i
-//ftwr
+handler.tags = ['quotes']
+handler.command = /^(dare)$/i
+
 module.exports = handler
+
+function pickRandom(list) {
+  return list[Math.round(Math.random() * list.length)]
+}
