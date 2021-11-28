@@ -17,7 +17,7 @@ Ketik ${usedPrefix}hint untuk bantuan
 Bonus: ${poin} XP
     `.trim()
   conn.tebakgambar[id] = [
-    await conn.sendFile(m.chat, json.image, 'tebakgambar.jpg', caption, m, false, { thumbanil: Buffer.alloc(0) }),
+    await conn.sendFile(m.chat, json.img, 'tebakgambar.jpg', caption, m, false, { thumbanil: Buffer.alloc(0) }),
     json, poin,
     setTimeout(async () => {
       if (conn.tebakgambar[id]) await conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, conn.tebakgambar[id][0])
