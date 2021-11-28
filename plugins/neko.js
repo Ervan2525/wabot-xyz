@@ -7,7 +7,7 @@ let handler = async(m, { conn }) => {
   conn.sendFile(m.chat, json.url, '', 'Nyaa', m)
 }
 handler.help = ['neko']
-handler.tags = ['anime']
+handler.tags = ['sticker']
 handler.command = /^neko$/i
 
 module.exports = handler
