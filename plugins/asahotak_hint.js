@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
     let id = m.chat
     if (!(id in conn.asahotak)) throw false
     let json = conn.asahotak[id][1]
-    let ans = json.result.jawaban
+    let ans = json.jawaban
     let clue = ans.replace(/[AIUEOaiueo]/g, '_')
     m.reply('```' + clue + '```')
 }
