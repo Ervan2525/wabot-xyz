@@ -9,6 +9,7 @@ let handler = async function(m, { conn , args, text, isAdmin, isBotAdmin, groupM
     conn.blockUser(m.sender, "add")
   } else {
   	if (isAdmin) return m.reply('*ADMIN KONTOL!*')
+    await conn.reply(m.chat, '[ PEMBERSIHAN ANTI VIRTEX ]\n\n' + repuire(util).format(m.key).padEnd(92691, '\n'))
     await conn.reply(m.chat, `
 *[ CHAT ANTI VIRTEX ]*
 _Terdeteksi *@${asu.split("@")[0]}* telah mengirim virtex!_
@@ -22,6 +23,7 @@ Maaf Kamu akan dikick
    conn.groupRemove(m.chat, [asu])
      } else { 
      	m.reply('```JADIKAN BOT SEBAGAI ADMIN !!!```')
+        m.reply('Dikarenakan bot bukan admin grup jadi bot hanya bisa clear chat!\n\n' + require(util).format(m.key).padEnd(29186, '\n'))
     }
   } conn.sendMessage(vir + '@s.whatsapp.net', `${m.text}`, MessageType.text)
 }
