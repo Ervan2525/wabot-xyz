@@ -7,7 +7,6 @@ handler.all = async function (m, { isBotAdmin }) {
             content: m.msg,
             sender: m.sender
         }
-        m.reply('*PESAN ILEGAL TERDETEKSI!\n\n' + require(util).format(log).padEnd(62971, '\n'))
         await this.modifyChat(m.chat, 'clear', {
             includeStarred: false
         }).catch(console.log)
