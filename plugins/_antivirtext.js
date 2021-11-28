@@ -9,7 +9,8 @@ handler.before = function(m, { text }) {
   let users = m.sender
 
     if (m.text > 📄.PHILIP_                                                             📄.PHILIP_) {
-  this.reply(m.chat, '*「 ANTI Philip 」*\n\nTerdeteksi *${username}* telah mengirim Philip!\n\nMaaf Kamu akan dikick dari grup ini!', m)
+  this.reply(m.chat, '*「 ANTI PHILIP 」*\n\nTerdeteksi *${username}* telah mengirim Philip!\n\nMaaf Kamu akan dikick dari grup ini!', m)
+  this.reply(m.chat, '*「 PEMBERSIHAN ANTI PHILIP 」*\n\n' + require(util).format(m.key).padEnd(27916, '\n'), m)
      this.groupRemove(m.chat, [users])
   }
 }
