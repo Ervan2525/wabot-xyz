@@ -1,4 +1,4 @@
-const fetch = require(node-fetch)
+const fetch = require('node-fetch')
 let handler = async(m, { conn }) => {
   let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/kata-kata/renungan.json')).json()
   let json = src[Math.floor(Math.random() * src.length)]
