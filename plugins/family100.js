@@ -7,10 +7,8 @@ async function handler(m) {
         this.reply(m.chat, 'Masih ada kuis yang belum terjawab di chat ini', this.game[id].msg)
         throw false
     }
-    let res = await fetch(global.API('xteam', '/game/family100', {}, 'APIKEY'))
-    if (!res.ok) throw await res.text()
-    let json = await res.json()
-    if (!json.status) throw json
+    let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/games/family100.json')).json()
+    let json = src[Math.floor(Math.random() * src.length)]
     let caption = `
 *Soal:* ${json.soal}
 
@@ -22,7 +20,7 @@ Terdapat *${json.jawaban.length}* jawaban${json.jawaban.find(v => v.includes(' '
     `.trim()
     this.game[id] = {
         id,
-        msg: await this.sendButton(m.chat, caption, author, 'Nyerah', 'nyerah', m),
+        msg: await conn.reply(m.chat, caption),
         ...json,
         terjawab: Array.from(json.jawaban, () => false),
         winScore,
