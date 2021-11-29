@@ -9,12 +9,10 @@ let handler = async (m, { conn, usedPrefix }) => {
         conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakkimia[id][0])
         throw false
     }
-    let res = await fetch(global.API('http://zekais-api.herokuapp.com', '/tebakunsur'))
-    if (res.status !== 200) throw await res.text()
-    let json = await res.json()
-    if (json.status != 200) throw json
+    let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkimia.json')).json()
+    let json = src[Math.floor(Math.random() * src.length)]
     let caption = `
-Nama unsur dari lambang ${json.simbol} adalah...
+Nama unsur dari lambang ${json.lambang} adalah...
 
 Timeout *${(timeout / 1000).toFixed(2)} detik*
 Ketik ${usedPrefix}teki untuk bantuan
@@ -24,7 +22,7 @@ Bonus: ${poin} XP
         await conn.reply(m.chat, caption, m),
         json, poin,
         setTimeout(() => {
-            if (conn.tebakkimia[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.name}*`, conn.tebakkimia[id][0])
+            if (conn.tebakkimia[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.unsur}*`, conn.tebakkimia[id][0])
             delete conn.tebakkimia[id]
         }, timeout)
     ]
