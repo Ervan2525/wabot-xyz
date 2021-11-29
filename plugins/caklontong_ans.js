@@ -11,7 +11,7 @@ module.exports = {
             if (['.ao', 'Bantuan', ''].includes(m.text)) return !0
             if (m.text.toLowerCase() == json.jawaban.toLowerCase().trim()) {
                 global.db.data.users[m.sender].exp += this.caklontong[id][2]
-                await this.sendButton(m.chat, `*Benar!* +${this.caklontong[id][2]} XP\n${json.deskripsi}`, author, 'Cak Lontong', '.caklontong', m)
+                await m.reply(`*Benar!* +${this.caklontong[id][2]} XP\n${json.deskripsi}`)
                 clearTimeout(this.caklontong[id][3])
                 delete this.caklontong[id]
             } else if (similarity(m.text.toLowerCase(), json.jawaban.toLowerCase().trim()) >= threshold) m.reply(`*Dikit Lagi!*`)
