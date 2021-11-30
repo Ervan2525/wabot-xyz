@@ -43,34 +43,30 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-┌─❖「 *INFO USER* 」
-│❦ *Nama* : *%name*
-│❦ *Sisa Limit:* : *%limit* Limit
-│❦ *Role:* : *%role*
-│❦ *Sisa Level* : *%level (%exp / %maxexp)*
-│❦ *Total XP* : *%totalexp*XP
-│❦ %exp4levelup Lagi Untuk Levelup
-└─❖
-┌─❖「 *INFO BOT* 」
-│➫ *Nama Bot* : *%me*
-│➫ *Uptime* : *%uptime (%muptime)*
-│➫ *Database* : *%rtotalreg of %totalreg*
-└─❖
-┌─❖
-│*「 FULL MENU KEBAWAH 」*
-└┬❖
-    │ *「 Tanggal 」*
-┌┤✑  *Tanggal* : *%week %weton, %date*
-││✑  *Tanggal Islam* : *%dateIslamic*
-││✑  *Waktu* : *%time*
-│└────────────┈ ⳹
+╭─「 %me 」
+│ Hai, %name!
+│
+│ Tersisa *%limit Limit*
+│ Role *%role*
+│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
+│ %totalexp XP in Total
+│ 
+│ Tanggal: *%week %weton, %date*
+│ Tanggal Islam: *%dateIslamic*
+│ Waktu: *%time*
+│
+│ Uptime: *%uptime (%muptime)*
+│ Database: %rtotalreg of %totalreg
+│ Github:
+│ %github
+╰────
 %readmore`.trimStart(),
-  header: '│「 _*%category*_ 」',
-  body: '│✙ %cmd %islimit %isPremium',
-  footer: '├─────────────┈ ⳹\n',
+  header: '╭─「 %category 」',
+  body: '│ • %cmd %islimit %isPremium',
+  footer: '╰────\n',
   after: `
 *%npmname@^%version*
-${```%npmdesc```}
+${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -170,7 +166,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     conn.reply(m.chat, text.trim(), m)
-    //await conn.send2Button(m.chat, text.trim(), 'made with ❤️ by JayaGanz', 'OWNER', '.owner', 'DONASI', '.donasi')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
