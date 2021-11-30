@@ -38,7 +38,7 @@ let tags = {
   'apk': 'Mod Apk',
   'owner': 'Owner',
   'host': 'Host',
-  'advanced': 'Advanced'
+  'advanced': 'Advanced',
   '': 'No Category',
 }
 const defaultMenu = {
