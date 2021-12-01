@@ -33,6 +33,6 @@ ${txt}
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
-handler.command = /^(tik(tok)?(dl)?)$/i
+handler.command = /^(tik(tok)?(dl|nowm)?)$/i
 
 module.exports = handler
