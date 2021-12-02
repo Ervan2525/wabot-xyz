@@ -1,4 +1,3 @@
-let fetch = require('node-fetch') 
 let handler  = async (m) => {
   m.reply(pickRandom(global.dare))
 }
