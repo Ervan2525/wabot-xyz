@@ -2,7 +2,7 @@ let fs = require('fs')
 
 let handler = async (m, { conn, usedPrefix }) => {
   let pp = await (await fetch('https://telegra.ph/file/7c0b1068736040b515d81.jpg')).buffer()
-  conn.fakelnk(m.chat, `*▢ HACKER*\n${pickRandom(global.hacker)}`, 'Follow me on github!', pp, m)
+  conn.reply(m.chat, `*${pickRandom(global.hacker)}*`, m)
 }
 handler.help = ['hacker']
 handler.tags = ['random']
