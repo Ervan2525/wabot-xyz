@@ -39,6 +39,6 @@ global.ilham = [
 "ngapain tidur kalo besok bangun lagi",
 "dia ngetik pake jari, lu bales pake hati",
 "Dia tak buta warna, kau yang bukan pelanginya",
-“Dia nggk sibuk, lu yang bukan prioritas nya",
+"Dia nggk sibuk, lu yang bukan prioritas nya",
 "Jangan pernah jadi pelangi, untuk seseorang yang buta warna"
 ]
