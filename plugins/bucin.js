@@ -1,5 +1,5 @@
 let handler  = async (m, { conn }) => {
-  await conn.sendButton(m.chat,`“${pickRandom(global.bucin)}”`, 'JayaBotz', 'BUCIN', '.bucin', m)
+  await conn.reply(m.chat,`“${pickRandom(global.bucin)}”`, m)
 }
 handler.help = ['bucin']
 handler.tags = ['quotes']
@@ -21,7 +21,6 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-// https://jalantikus.com/tips/kata-kata-bucin/
 global.bucin = [
   "Aku memilih untuk sendiri, bukan karena menunggu yang sempurna, tetapi butuh yang tak pernah menyerah.",
   "Seorang yang single diciptakan bersama pasangan yang belum ditemukannya.",
