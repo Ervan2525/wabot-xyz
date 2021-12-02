@@ -1,6 +1,6 @@
 let fetch = require('node-fetch') 
 let handler  = async (m) => {
-  m.reply('*DARE*\n\n' + pickRandom(global.tantangan))
+  m.reply(pickRandom(global.dare))
 }
 handler.help = ['dare']
 handler.tags = ['quotes']
@@ -12,7 +12,7 @@ function pickRandom(list) {
   return list[Math.round(Math.random() * list.length)]
 }
 
-global.tantangan = [
+global.dare = [
 "Ajak orang yg tidak kamu kenal itu selfie berdua dengan mu lalu upload ke snapgram", 
 "Ambil beberapa nomor dari kontakmu secara acak dan kirim sms 'Aku hamil' sama mereka.",
 "Ambil minuman apa saja yg ada didekat mu lalu campurkan dengan cabai dan minum!",
