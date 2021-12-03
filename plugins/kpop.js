@@ -203,7 +203,7 @@ global.bts = [
 "https://i.pinimg.com/originals/a1/22/68/a122682913f5a740e13ac4e9607e5a9e.jpg",
 "https://i.pinimg.com/originals/20/05/04/20050476205703de41174d9233fc5df3.jpg",
 "https://i.pinimg.com/originals/95/70/f2/9570f2dec195935bd96eeaca571f91a3.jpg",
-"https://i.pinimg.com/originals/d6/ae/b9/d6aeb9ebc89dcdf1bba61940f2baaf5f.gif
+"https://i.pinimg.com/originals/d6/ae/b9/d6aeb9ebc89dcdf1bba61940f2baaf5f.gif",
 "https://i.pinimg.com/originals/d6/4a/b3/d64ab3f54cb2552ef461094ef959f908.jpg",
 "https://i.pinimg.com/originals/1f/2b/80/1f2b80687df919f6bc015f732fd9cf55.jpg",
 "https://i.pinimg.com/originals/b1/04/67/b10467aa65bf6dd2ce00515c5a9fd372.jpg",
@@ -449,7 +449,7 @@ global.blackpink = [
 "https://i.pinimg.com/originals/b0/86/e5/b086e5141fb59f56b9d9f06b85eb509b.jpg",
 "https://i.pinimg.com/originals/da/f1/e5/daf1e564eb9bb044c52b06a5eff41bde.jpg",
 "https://i.pinimg.com/originals/62/7c/c4/627cc4ceb39973ae854acb157ee4c30e.jpg",
-"https://i.pinimg.com/originals/96/75/09/967509a1cc1091f82e631543d58cd4a3.gif
+"https://i.pinimg.com/originals/96/75/09/967509a1cc1091f82e631543d58cd4a3.gif",
 "https://i.pinimg.com/originals/68/2f/2a/682f2a712321813abee382c826a90fd7.jpg",
 "https://i.pinimg.com/originals/48/02/bd/4802bdb3ef79697ddc1b409de9a700e2.jpg",
 "https://i.pinimg.com/originals/1e/a1/09/1ea109b6b489dda00fa1d83577ae062d.jpg",
@@ -681,7 +681,7 @@ global.exo = [
 "https://i.pinimg.com/originals/63/55/ba/6355babe2ffefdf27ff3a7babf710eac.jpg",
 "https://i.pinimg.com/originals/00/dc/8a/00dc8a7ebcd5642196b3c484863adc46.jpg",
 "https://i.pinimg.com/originals/48/d0/b3/48d0b3008bf41b226226a4283f1441e6.jpg",
-"https://i.pinimg.com/originals/46/f5/6e/46f56e9d9db18a47bd73376405f2ba49.gif
+"https://i.pinimg.com/originals/46/f5/6e/46f56e9d9db18a47bd73376405f2ba49.gif",
 "https://i.pinimg.com/originals/16/0d/bf/160dbfbd3c815862b3d484e6c6db9930.jpg",
 "https://i.pinimg.com/originals/8f/30/1e/8f301e4b0d665a5b4601f8c5b2ac6664.jpg",
 "https://i.pinimg.com/originals/df/35/e3/df35e34e4bda721604bd1a79000bd708.jpg",
@@ -702,14 +702,14 @@ global.exo = [
 "https://i.pinimg.com/originals/a8/88/7d/a8887d892e7eddcba5a67e0694249171.jpg",
 "https://i.pinimg.com/originals/c5/29/86/c52986e56b7f2ec672a31822e97456b4.jpg",
 "https://i.pinimg.com/originals/99/6e/6c/996e6c5e70e1dc40c6aad79a106fde07.png",
-"https://i.pinimg.com/originals/9a/ef/8f/9aef8f43d7d690d0b1b445d6e905c0f3.gif
+"https://i.pinimg.com/originals/9a/ef/8f/9aef8f43d7d690d0b1b445d6e905c0f3.gif",
 "https://i.pinimg.com/originals/88/51/26/8851269ea3008c1275ce22d80e9d791b.jpg",
 "https://i.pinimg.com/originals/28/4f/48/284f48e202b1ff920746c117709919e4.jpg",
 "https://i.pinimg.com/originals/9b/84/00/9b84005158db5fe9e9361825bdd37433.jpg",
-"https://i.pinimg.com/originals/1a/ee/86/1aee86fcf8ade931098e20f8e66b984e.gif
+"https://i.pinimg.com/originals/1a/ee/86/1aee86fcf8ade931098e20f8e66b984e.gif",
 "https://i.pinimg.com/originals/70/f5/ff/70f5ff41e702ca5382e30ac47313fba7.jpg",
 "https://i.pinimg.com/originals/1c/1a/98/1c1a98ef736c1c3ec561e2add1a26452.jpg",
-"https://i.pinimg.com/originals/c4/60/9a/c4609a4c7224766ab58bb1bafe08a9e6.gif
+"https://i.pinimg.com/originals/c4/60/9a/c4609a4c7224766ab58bb1bafe08a9e6.gif",
 "https://i.pinimg.com/originals/98/b8/2a/98b82a3b5b777e3bac35980f75b2cfcc.jpg",
 "https://i.pinimg.com/originals/10/72/f1/1072f1280fb35b87e395d9e56e2a91a8.jpg",
 "https://i.pinimg.com/originals/8a/a4/7d/8aa47de5bbb02e63b90f214514a0fb9c.jpg",
