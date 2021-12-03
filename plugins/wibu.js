@@ -1,5 +1,5 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-  if (/^anime$/i.test(command)) {
+  if (/^wibu$/i.test(command)) {
     await conn.send2Button(m.chat, `Anime Menu\nSilakan klik tombol dibawah untuk melanjutkan`, author, 'Anime Husbu', `${usedPrefix}husbu`, 'Anime Neko', `${usedPrefix}neko`, m)
     await conn.send2Button(m.chat, `Anime Menu2\nSilakan klik tombol dibawah untuk melanjutkan`, author, 'Anime Random', `${usedPrefix}random`, 'Anime Waifu', `${usedPrefix}waifu`, m)
   }
@@ -20,9 +20,9 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 
   }
 }
-handler.help = ['anime']
+handler.help = ['wibu']
 handler.tags = ['tools']
-handler.command = /^(anime|husbu|neko|random|waifu)$/i
+handler.command = /^(wibu|husbu|neko|random|waifu)$/i
 
 module.exports = handler
 
