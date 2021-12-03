@@ -21,7 +21,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
   }
 }
 handler.help = ['anime']
-handler.tags = ['fun']
+handler.tags = ['tools']
 handler.command = /^(anime|husbu|neko|random|waifu)$/i
 
 module.exports = handler
