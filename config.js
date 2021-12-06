@@ -45,9 +45,8 @@ fs.watchFile(file_exif, () => {
 global.packname = sticker_name
 global.author = sticker_author
 
-
 global.multiplier = 69 // The higher, The harder levelup
-
+global.success = 'Berhasil!'
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
