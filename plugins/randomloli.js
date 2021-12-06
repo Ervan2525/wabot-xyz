@@ -1,24 +1,14 @@
-let handler = async (m, { conn, text }) => {
-  let yh = global.loli
-  let url = yh[Math.floor(Math.random() * yh.length)]
-  let buttons = [
-    { buttonId: '/loli', buttonText: { displayText: 'Get Again' }, type: 1 }
-  ]
-  const buttonsMessage = {
-    contentText: `
-Random Loli
-`.trim(), footerText: 'Lolinya Kaak',
-    buttons: buttons,
-    imageMessage: await conn.prepareMessageMedia({ url }, 'imageMessage'),
-    headerType: 'IMAGE'
-  }
-  const sendMsg = await conn.prepareMessageFromContent(m.chat, { buttonsMessage }, { quoted: m })
-  conn.relayWAMessage(sendMsg)
+let handler = async (m, { conn }) => {
+  conn.sendFile(m.chat, pickRandom(global.loli), 'loli.jpg', 'Random Loli', m)
 }
 handler.command = /^(loli)$/i
 handler.tags = ['internet']
 handler.help = ['loli']
 module.exports = handler
+
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())]
+}
 
 global.loli = [
   "https://i.imgur.com/cvqoK7l.jpg",
