@@ -12,6 +12,7 @@ let tags = {
   'group': 'Group',
   'premium': 'Premium',
   'internet': 'Internet',
+  'gacha': 'Gacha',
   'anonymous': 'Anonymous Chat',
   'nulis': 'MagerNulis & Logo',
   'downloader': 'Downloader',
@@ -64,9 +65,10 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-
 *%npmname@^%version*
-${'```%npmdesc```'}`,
+${'```%npmdesc```'}
+
+`,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
