@@ -71,33 +71,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.antiLink = isEnable
       break
-    case 'antiphilip':
-      if (m.isGroup) {
-    	if (!isAdmin) {
-      	global.dfail('admin', m, conn)
-          thorw false
-        }
-     }
-     chat.antiPhilip = isEnable
-    break
-   case 'antiwibu':
-    if (m.isGroup) {
-    	if (!isAdmin) {
-      	global.dfail('admin', m, conn)
-          thorw false
-        }
-     }
-     chat.antiWibu = isEnable
-     break
-    case 'antijawa':
-     if (m.isGroup) {
-    	if (!isAdmin) {
-      	global.dfail('admin', m, conn)
-          thorw false
-        }
-     }
-     chat.antiJawa = isEnable
-     break
     case 'autolevelup':
       isUser = true
       user.autolevelup = isEnable
@@ -176,7 +149,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     default:
       if (!/[01]/.test(command)) throw `
-List option: welcome | delete | public | antilink | antiphilip | antiwibu | antijawa | autolevelup | detect | document | whitelistmycontacts | restrict | nyimak | autoread | pconly | gconly | swonly | viewonce
+List option: welcome | delete | public | antilink | autolevelup | detect | document | whitelistmycontacts | restrict | nyimak | autoread | pconly | gconly | swonly | viewonce
 
 Contoh:
 ${usedPrefix}enable welcome
