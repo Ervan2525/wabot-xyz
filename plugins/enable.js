@@ -8,31 +8,25 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   switch (type) {
     case 'welcome':
       if (!m.isGroup) {
-        if (!isOwner) {
-          global.dfail('group', m, conn)
-          throw false
-        }
-      } else if (!isAdmin) {
+        if (!isAdmin) {
         global.dfail('admin', m, conn)
         throw false
+        }
       }
       chat.welcome = isEnable
       break
     case 'detect':
       if (!m.isGroup) {
-        if (!isOwner) {
-          global.dfail('group', m, conn)
-          throw false
-        }
-      } else if (!isAdmin) {
+        if (!isAdmin) {
         global.dfail('admin', m, conn)
         throw false
+        }
       }
       chat.detect = isEnable
       break
     case 'delete':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!isAdmin) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -41,7 +35,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     case 'antidelete':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!isAdmin) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -50,7 +44,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     case 'autodelvn':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!isAdmin) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -70,13 +64,40 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     case 'antilink':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!isAdmin) {
           global.dfail('admin', m, conn)
           throw false
         }
       }
       chat.antiLink = isEnable
       break
+    case 'antiphilip':
+      if (m.isGroup) {
+    	if (!isAdmin) {
+      	global.dfail('admin', m, conn)
+          thorw false
+        }
+     }
+     chat.antiPhilip = isEnable
+    break
+   case 'antiwibu':
+    if (m.isGroup) {
+    	if (!isAdmin) {
+      	global.dfail('admin', m, conn)
+          thorw false
+        }
+     }
+     chat.antiWibu = isEnable
+     break
+    case 'antijawa':
+     if (m.isGroup) {
+    	if (!isAdmin) {
+      	global.dfail('admin', m, conn)
+          thorw false
+        }
+     }
+     chat.antiJawa = isEnable
+     break
     case 'autolevelup':
       isUser = true
       user.autolevelup = isEnable
@@ -155,7 +176,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     default:
       if (!/[01]/.test(command)) throw `
-List option: welcome | delete | public | antilink | autolevelup | detect | document | whitelistmycontacts | restrict | nyimak | autoread | pconly | gconly | swonly | viewonce
+List option: welcome | delete | public | antilink | antiphilip | antiwibu | antijawa | autolevelup | detect | document | whitelistmycontacts | restrict | nyimak | autoread | pconly | gconly | swonly | viewonce
 
 Contoh:
 ${usedPrefix}enable welcome

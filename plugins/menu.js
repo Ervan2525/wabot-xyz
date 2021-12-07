@@ -18,7 +18,6 @@ let tags = {
   'tools': 'Tools',
   'fun': 'Fun',
   'random': 'Random',
-  'gacha': 'Gacha',
   'database': 'Database',
   'vote': 'Voting',
   'absen': 'Absen',
@@ -65,12 +64,9 @@ const defaultMenu = {
   body: '├ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
 
-Keterangan:
-tanda ⭐ (memakai limit penggunan harian)
-tanda ✨ (fitur premium)`,
+*%npmname@^%version*
+${'```%npmdesc```'}`,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
@@ -129,11 +125,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
         for (let tag of plugin.tags)
           if (!(tag in tags) && tag) tags[tag] = tag
     conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || defaultMenu.before + (conn.user.jid == global.conn.user.jid ? '' : `Dibuat oleh https://wa.me/${global.conn.user.jid.split`@`[0]}`)
+    let before = conn.menu.before || defaultMenu.before
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || defaultMenu.after
+    let after = conn.menu.after || defaultMenu.after + (conn.user.jid == global.conn.user.jid ? '' : `Dibuat oleh\nhttps://wa.me/${global.conn.user.jid.split`@`[0]}`)
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
@@ -141,8 +137,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '⭐' : '')
-                .replace(/%isPremium/g, menu.premium ? '✨' : '')
+                .replace(/%islimit/g, menu.limit ? '[ LIMIT ]' : '')
+                .replace(/%isPremium/g, menu.premium ? '[ PREMIUM ]' : '')
                 .trim()
             }).join('\n')
           }),

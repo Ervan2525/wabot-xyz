@@ -5,7 +5,10 @@ let handler = async function (m, { conn, text, usedPrefix }) {
   let sn = createHash('md5').update(m.sender).digest('hex')
 
 m.reply(`
-SN: ${sn}
+*Cek SN*
+
+Sn kamu adalah:
+${sn}
 `.trim())
 }
 
