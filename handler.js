@@ -71,9 +71,6 @@ module.exports = {
           if (!('sDemote' in chat)) chat.sDemote = ''
           if (!('delete' in chat)) chat.delete = true
           if (!('antiLink' in chat)) chat.antiLink = false
-          if (!('antiphilip' in chat)) chat.antiPhilip = false
-          if (!('antiwibu' in chat)) chat.antiWibu = false
-          if (!('antijawa' in chat)) chat.antiJawa = false
           if (!('viewonce' in chat)) chat.viewonce = false
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
@@ -85,9 +82,6 @@ module.exports = {
           sDemote: '',
           delete: true,
           antiLink: false,
-          antiphilip: false,
-          antiwibu: false,
-          antijawa: false,
           viewonce: false,
         }
       } catch (e) {
