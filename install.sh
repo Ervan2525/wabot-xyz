@@ -1,5 +1,5 @@
-pkg install nodejs -y
-pkg install ffmpeg -y
-pkg install imagemagick -y
+apt install nodejs
+npm install ffmpeg
+npm install imagemagick
 npm install
 npm update
