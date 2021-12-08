@@ -1,7 +1,7 @@
-let fetch = require('node-fetch')
+let axios = require('axios')
 let handler = async function (m, { text }) {
   if (!text) throw 'Soalnya?'
-  let res = await fetch(global.API('xteam', 'brainly', { soal=text }, 'APIKEY'))
+  axios.get('https://api.xteam.xyz/brainly?soal=${text}&APIKEY=genbotkey').then((res) => {
   m.reply(res.jawaban)
 }
 handler.help = ['brainly <soal>']
