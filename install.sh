@@ -1,5 +1,5 @@
-#!/usr/bin/bash
-
-npm install ffmpeg
-npm install imagemagick
+pkg install nodejs -y
+pkg install ffmpeg -y
+pkg install imagemagick -y
 npm install
+npm update
