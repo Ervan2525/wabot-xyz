@@ -12,7 +12,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let src = await (await fetch('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakbendera.json')).json()
     let json = src[Math.floor(Math.random() * src.length)]
     conn.tebakbendera[id] = [
-      await conn.sendFile(m.chat, json.url, 'bendera.jpg', `Timeout: *${(timeout / 1000).toFixed(2)} detik*\nKetik *${usedPrefix}tbhint* untuk hint\nBonus: ${poin} XP`, m),
+      await conn.sendFile(m.chat, json.img, 'bendera.jpg', `Timeout: *${(timeout / 1000).toFixed(2)} detik*\nKetik *${usedPrefix}tbhint* untuk hint\nBonus: ${poin} XP`, m),
       json, poin,
       setTimeout(() => {
         if (conn.tebakbendera[id]) conn.reply(m.chat, `Waktu habis!\n*${json.name}*`, conn.tebakbendera[id][0])
