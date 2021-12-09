@@ -8,7 +8,6 @@ global.APIs = { // API Prefix
   // name: 'https://website'
   bx: 'https://bx-hunter.herokuapp.com',
   dhnjing: 'https://dhnjing.xyz',
-  hardianto: 'https://hardianto-chan.herokuapp.com',
   jonaz: 'https://jonaz-api-v2.herokuapp.com',
   neoxr: 'https://neoxr-api.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -20,8 +19,7 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
-  'https://bx-hunter.herokuapp.com': 'Ikyy69',
-  'https://hardianto-chan.herokuapp.com': 'hardianto',
+  'https://bx-hunter.herokuapp.com': 'ikyy69',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': '49f73aceea804f2a',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
