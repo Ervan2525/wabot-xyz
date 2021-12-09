@@ -10,7 +10,7 @@ ${ar.map(v => '├ ' + v).join`\n`}
 contoh:
 ${usedPrefix}${command} panda
 `.trim()
-  let res = await fetch(global.APIs('https://some-random-api.ml', '/animal/' + text, {}))
+  let res = await fetch(global.API('https://some-random-api.ml', '/animal/' + text, {}))
   if (!res.ok) throw `${res.status} ${res.statusText}`
   let json = await res.json()
   if (json.image) await conn.sendFile(m.chat, json.image, '', `${json.fact}`, m)
