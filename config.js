@@ -20,6 +20,7 @@ global.APIs = { // API Prefix
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://bx-hunter.herokuapp.com': 'ikyy69',
+  'https://dhnjing.xyz': '229df9a9b12c65639fad',
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': '49f73aceea804f2a',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
