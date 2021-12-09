@@ -3,12 +3,12 @@ const threshold = 0.72
 module.exports = {
     async before(m) {
         let id = m.chat
-        if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.ano/i.test(m.quoted.contentText)) return !0
+        if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*ano/i.test(m.quoted.contentText)) return !0
         this.tebakanime = this.tebakanime ? this.tebakanime : {}
         if (!(id in this.tebakanime)) return m.reply('Soal itu telah berakhir')
         if (m.quoted.id == this.tebakanime[id][0].id) {
             let json = JSON.parse(JSON.stringify(this.tebakanime[id][1]))
-            if (['.ano', 'bantuan', ''].includes(m.text)) return !0
+            if (['.ano', 'Bantuan', ''].includes(m.text)) return !0
             if (m.text.toLowerCase() == json.name.toLowerCase().trim()) {
                 global.db.data.users[m.sender].exp += this.tebakanime[id][2]
                 await m.reply(`*Benar!* +${this.tebakanime[id][2]} XP`)
