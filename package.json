@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "nodemon -x node index.js || touch index.js",
-    "test": "node test.js"
+    "test": "node test.js",
+    "tsc": "node . --server"
   },
   "nodemonConfig": {
     "ext": "js,html,sh"
