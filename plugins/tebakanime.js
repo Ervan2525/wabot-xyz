@@ -14,7 +14,10 @@ let handler  = async (m, { conn, usedPrefix }) => {
     if (res.status !== 200) throw await res.text()
     let json = await res.json()
     if (!json.status) throw json
-    let caption = `Waktu : ${(timeout / 1000).toFixed(2)} Detik\nKetik ${usedPrefix}ano untuk bantuan\n\nBonus : ${poin} XP`
+    let caption = `
+*Timeout : ${(timeout / 1000).toFixed(2)} Detik*
+Ketik ${usedPrefix}ano untuk bantuan
+Bonus : ${poin} XP`
     conn.tebakanime[id] = [
       await conn.sendFile(m.chat, json.image, 'tebakanime.jpg', caption, m),
       json, poin,
