@@ -3,6 +3,7 @@ let fetch = require('node-fetch')
 let simple = require('./lib/simple')
 let { MessageType } = require('@adiwajshing/baileys')
 const knights = require('knights-canvas')
+const uploadImage = require('./lib/uploadImage')
 
 const isNumber = x => typeof x === 'number' && !isNaN(x)
 const delay = ms => isNumber(ms) && new Promise(resolve => setTimeout(resolve, ms))
