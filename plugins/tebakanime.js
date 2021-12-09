@@ -15,8 +15,8 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.status) throw json
     let caption = `
-*Timeout : ${(timeout / 1000).toFixed(2)} Detik*
-Ketik ${usedPrefix}ano untuk bantuan
+Timeout: *${(timeout / 1000).toFixed(2)} Detik*
+Ketik *${usedPrefix}ano* untuk bantuan
 Bonus : ${poin} XP`
     conn.tebakanime[id] = [
       await conn.sendFile(m.chat, json.image, 'tebakanime.jpg', caption, m),
