@@ -1,11 +1,16 @@
 let fs = require('fs')
 let chalk = require('chalk')
 
-global.owner = ['6289524664142','6289512971981'] // Put your number here
+global.owner = ['6289524664142','6289512971981','6283104534997','6288289020627'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
+  bx: 'https://bx-hunter.herokuapp.com',
+  dhnjing: 'https://dhnjing.xyz',
+  hardianto: 'https://hardianto-chan.herokuapp.com',
+  jonaz: 'https://jonaz-api-v2.herokuapp.com',
+  neoxr: 'https://neoxr-api.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz',
   zahir: 'https://zahirr-web.herokuapp.com',
@@ -15,6 +20,9 @@ global.APIs = { // API Prefix
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
+  'https://bx-hunter.herokuapp.com': 'Ikyy69',
+  'https://hardianto-chan.herokuapp.com': 'hardianto',
+  'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': '49f73aceea804f2a',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://api.zeks.xyz': 'apivinz',
