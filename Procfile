@@ -1,1 +1,1 @@
-worker: node . --server 
+worker: node run postinstall && node . --server
