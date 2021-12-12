@@ -1,5 +1,3 @@
-//kok cewe gw jadi cuek yahh? daritadi pagi gw chat ga dibales cuman di read doang
-
 const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn }) => {
