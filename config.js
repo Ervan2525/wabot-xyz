@@ -24,7 +24,7 @@ global.APIKeys = { // APIKey Here
   'https://neoxr-api.herokuapp.com': 'yntkts',
   'https://api.xteam.xyz': '49f73aceea804f2a',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
+  'https://api.zeks.xyz': 'OKW7NC1B5b8ujzCaocblcsF95ba',
   'https://pencarikode.xyz': 'pais',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
@@ -52,6 +52,7 @@ fs.watchFile(file_exif, () => {
 global.packname = sticker_name
 global.author = sticker_author
 
+global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 
 global.multiplier = 69 // The higher, The harder levelup
 
