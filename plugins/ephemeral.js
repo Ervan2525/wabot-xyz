@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, isBotAdmin, isAdmin, isOwner, usedPrefix }
             throw false
         }
     }
-    m.reply(`*Pilihan tersedia untuk pesan sementara:*\n\n1. 24 jam: ${usedPrefix}ephe 1\n2. 7 hari: ${usedPrefix}ephe 7\n3. 90 hari: ${usedPrefix}ephe 90
+    m.reply(`*Pilihan tersedia untuk pesan sementara:*\n\n1. 24 jam: ${usedPrefix}ephe 1\n2. 7 hari: ${usedPrefix}ephe 7\n3. 90 hari: ${usedPrefix}ephe 90`)
     if (args[0] == '1') await conn.toggleDisappearingMessages(
         m.chat,
         1 * 24 * 60 * 60
