@@ -363,7 +363,7 @@ module.exports = {
                 .setBackground("./src/background.png")
                 .toAttachment()
 
-              this.sendButtonLoc(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, 'Whatsapp Bot', action === 'add' ? 'SELAMAT DATANG!', `${usedPrefi}say Disapa dulu dong member barunya suruh intro dulu :)` : 'SELAMAT TINGGAL!', `${usedPrefix}say Semoga dia tenang di alam sana ya!`, null, false, {
+              this.sendButtonLoc(jid, action === 'add' ? wel.toBuffer() : lea.toBuffer(), text, 'Whatsapp Bot', action === 'add' ? 'SELAMAT DATANG!', `${usedPrefix}say Disapa dulu dong member barunya suruh intro dulu :)` : 'SELAMAT TINGGAL!', `${usedPrefix}say Semoga dia tenang di alam sana ya!`, null, false, {
                 contextInfo: {
                   mentionedJid: [user]
                 }
